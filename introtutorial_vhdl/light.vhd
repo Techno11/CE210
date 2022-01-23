@@ -1,0 +1,14 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+
+ENTITY light IS
+	PORT( SW : IN STD_LOGIC_VECTOR(1 DOWNTO 0) ;
+			LEDR : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+		 );
+END light ;
+
+ARCHITECTURE LogicFunction OF light IS
+
+BEGIN
+	LEDR(0 DOWNTO 0) <= (SW(0 DOWNTO 0) AND NOT SW(1 DOWNTO 1)) OR (NOT SW(0 DOWNTO 0) AND SW(1 DOWNTO 1));
+END LogicFunction ;
