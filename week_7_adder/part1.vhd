@@ -1,4 +1,4 @@
--- 4-bit ripple-carry adder
+-- 4-bit ripple-ca	rry adder
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
